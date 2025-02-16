@@ -114,3 +114,50 @@ let bankAccount1 = new BankAccount(1000, "1234567890");
 bankAccount1.updateBalance = 500;
 bankAccount1.withdraw = 2000;
 console.log(bankAccount1)
+
+// question 05
+
+abstract class Shape {
+  protected color : string;
+  constructor(n : string){
+    this.color = n;
+  }
+  abstract calculateArea(w :number, h : number): void
+
+  get getColor (){
+    return this.color
+  }
+
+}
+class Circle extends Shape {
+  radius : number;
+  constructor(color : string , r : number){
+    super(color = color);
+    this.radius = r;
+  }
+
+
+  calculateArea(n : number ){
+    return this.radius = n;
+  }
+}
+
+class Rectangle extends Shape {
+  width: number;
+  height : number;
+  constructor(color: string, w: number , h : number) {
+    super((color = color));
+    this.width = w;
+    this.height = h;
+  }
+
+  calculateArea(w: number , h : number) {
+     this.height = w;
+     this.width = h;
+     return this.width * this.height;
+  }
+}
+
+let rectangle1 = new Rectangle ("green", 10, 20);
+
+console.log(rectangle1.calculateArea(3,5))

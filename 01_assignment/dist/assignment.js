@@ -80,3 +80,35 @@ let bankAccount1 = new BankAccount(1000, "1234567890");
 bankAccount1.updateBalance = 500;
 bankAccount1.withdraw = 2000;
 console.log(bankAccount1);
+// question 05
+class Shape {
+    constructor(n) {
+        this.color = n;
+    }
+    get getColor() {
+        return this.color;
+    }
+}
+class Circle extends Shape {
+    constructor(color, r) {
+        super(color = color);
+        this.radius = r;
+    }
+    calculateArea(n) {
+        return this.radius = n;
+    }
+}
+class Rectangle extends Shape {
+    constructor(color, w, h) {
+        super((color = color));
+        this.width = w;
+        this.height = h;
+    }
+    calculateArea(w, h) {
+        this.height = w;
+        this.width = h;
+        return this.width * this.height;
+    }
+}
+let rectangle1 = new Rectangle("green", 10, 20);
+console.log(rectangle1.calculateArea(3, 5));
