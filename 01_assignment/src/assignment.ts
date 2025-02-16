@@ -79,3 +79,38 @@ class Motercycle extends Vehicle {
 
 let motercycle1 = new Motercycle("Honda", "CBR500R", 2020, true);
 console.log(motercycle1)
+
+
+// qusestion 04 
+
+class BankAccount {
+  private balance : number;
+  readonly accountNumber : string;
+  constructor(b : number, accNo : string){
+    this.balance = b;
+    this.accountNumber = accNo;
+  }
+  get checkBalance ( ){
+    return this.balance
+  }
+
+  get account ( ){
+    return this.accountNumber
+  }
+
+  set updateBalance (amount : number){
+    this.balance = this.balance + amount;
+  }
+  set withdraw (amount : number){
+    if (amount < this.balance){
+      this.balance = this.balance - amount
+    } else{
+      console.log("insufficient balance")
+    }
+  }
+}
+
+let bankAccount1 = new BankAccount(1000, "1234567890");
+bankAccount1.updateBalance = 500;
+bankAccount1.withdraw = 2000;
+console.log(bankAccount1)
