@@ -93,9 +93,11 @@ class Circle extends Shape {
         this.radius = radius;
     }
     calculateArea() {
-        return `the area of circle is `;
+        return `the area of circle is ${2 * 3.142 * (this.radius ** 2)} `;
     }
 }
+let circle = new Circle(5, "red");
+console.log(circle.calculateArea());
 class Rectangle extends Shape {
     constructor(width, height, color) {
         super(color);
@@ -106,6 +108,8 @@ class Rectangle extends Shape {
         return `the area of rectangle is ${this.width * this.height}`;
     }
 }
+let rectangle = new Rectangle(5, 5, "orange");
+console.log(rectangle.calculateArea());
 const createProduct = (obj) => {
     return obj;
 };
