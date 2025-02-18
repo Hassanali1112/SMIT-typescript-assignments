@@ -117,4 +117,36 @@ let product1 = {
     category: "electronics products"
 };
 console.log(createProduct(product1));
+// Question 07 
+class Employee {
+    constructor(name, salary) {
+        this.name = name;
+        this.salary = salary;
+    }
+    getDetails() {
+        return `The name of employee is ${this.name} and his/her salary is ${this.salary}`;
+    }
+}
+class Developer extends Employee {
+    constructor(name, salary, pl) {
+        super(name = name, salary = salary);
+        this.programmingLanguage = pl;
+    }
+    getDetails() {
+        return `${super.getDetails()} and he/she is a ${this.programmingLanguage} expert`;
+    }
+}
+class Designer extends Employee {
+    constructor(name, salary, toolUsed) {
+        super(name = name, salary = salary);
+        this.toolUsed = toolUsed;
+    }
+    getDetails() {
+        return `${super.getDetails()} and he/she is a ${this.toolUsed} expert`;
+    }
+}
+let developer1 = new Developer("hassan ali", 500000, "javascript");
+console.log(developer1.getDetails());
+let designer1 = new Designer("hassan ali", 500000, "figma");
+console.log(designer1.getDetails());
 //# sourceMappingURL=app.js.map

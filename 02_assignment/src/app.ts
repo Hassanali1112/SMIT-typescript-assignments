@@ -183,3 +183,53 @@ let product1 : Product ={
 }
 console.log(createProduct(product1));
 
+// Question 07 
+
+class Employee {
+  name : string;
+  salary : number;
+  constructor (name : string, salary : number){
+    this.name = name;
+    this.salary = salary
+  }
+
+  getDetails (){
+    return `The name of employee is ${this.name} and his/her salary is ${this.salary}`
+  }
+}
+
+class Developer extends Employee {
+  programmingLanguage : string;
+
+  constructor(name : string, salary : number ,pl : string){
+    super(name = name , salary= salary)
+    this.programmingLanguage = pl;
+  }
+
+  getDetails() {
+    return `${super.getDetails()} and he/she is a ${this.programmingLanguage} expert`
+  }
+
+}
+
+class Designer extends Employee {
+  toolUsed : string;
+   
+  constructor(name : string, salary : number , toolUsed : string){
+    super(name = name , salary = salary);
+    this.toolUsed = toolUsed;
+  }
+
+  getDetails (){
+    return `${super.getDetails()} and he/she is a ${this.toolUsed} expert`
+  }
+
+}
+
+let developer1 = new Developer("hassan ali",500000, "javascript")
+
+console.log(developer1.getDetails())
+
+let designer1 = new Designer("hassan ali",500000, "figma")
+
+console.log(designer1.getDetails())
