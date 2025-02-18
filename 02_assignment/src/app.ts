@@ -301,3 +301,47 @@ let response = {
 }
 
 console.log(handleResponse(response));
+
+
+abstract class Animal{
+  protected species : string;
+
+  constructor (species : string){
+    this.species = species
+  }
+
+getSpecies (){
+ return this.species
+}
+
+  abstract makeSound() : string
+}
+
+
+class Dog extends Animal {
+  constructor (species : string){
+    super(species = species)
+  }
+  makeSound(): string {
+    return `Woof!`
+  }
+}
+
+class Cat extends Animal {
+  constructor(species: string) {
+    super(species = species);
+  }
+  makeSound(): string {
+    return `Meow!`;
+  }
+}
+
+let dog1 = new Dog("dog")
+
+console.log(dog1.makeSound())
+console.log(dog1.getSpecies())
+
+let cat1 = new Cat("cat")
+
+console.log(cat1.makeSound())
+console.log(cat1.getSpecies())

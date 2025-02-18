@@ -185,4 +185,34 @@ let response = {
     data: "error"
 };
 console.log(handleResponse(response));
+class Animal {
+    constructor(species) {
+        this.species = species;
+    }
+    getSpecies() {
+        return this.species;
+    }
+}
+class Dog extends Animal {
+    constructor(species) {
+        super(species = species);
+    }
+    makeSound() {
+        return `Woof!`;
+    }
+}
+class Cat extends Animal {
+    constructor(species) {
+        super(species = species);
+    }
+    makeSound() {
+        return `Meow!`;
+    }
+}
+let dog1 = new Dog("dog");
+console.log(dog1.makeSound());
+console.log(dog1.getSpecies());
+let cat1 = new Cat("cat");
+console.log(cat1.makeSound());
+console.log(cat1.getSpecies());
 //# sourceMappingURL=app.js.map
