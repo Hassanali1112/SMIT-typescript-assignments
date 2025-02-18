@@ -107,4 +107,14 @@ class Rectangle extends Shape {
         return `the area of rectangle is ${this.width * this.height}`;
     }
 }
+const createProduct = (obj) => {
+    return obj;
+};
+let product1 = {
+    id: 233,
+    name: "cell phone",
+    price: 50000,
+    category: "electronics products"
+};
+console.log(createProduct(product1));
 //# sourceMappingURL=app.js.map

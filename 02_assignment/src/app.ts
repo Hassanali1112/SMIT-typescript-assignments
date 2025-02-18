@@ -162,3 +162,24 @@ class Rectangle extends Shape {
   }
 }
 
+// Question 06 
+
+interface Product {
+  id : number;
+  name : string;
+  price : number;
+  category : string;
+}
+
+const createProduct = ( obj : Product) =>{
+  return obj;
+}
+
+let product1 : Product ={
+  id : 233,
+  name : "cell phone",
+  price : 50000,
+  category : "electronics products"
+}
+console.log(createProduct(product1));
+
