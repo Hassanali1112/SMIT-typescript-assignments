@@ -8,7 +8,6 @@ let user = {
     email: "hassan@gmail.com",
     isActive: true,
 };
-console.log(createUser(user));
 const processInput = (input) => {
     if (typeof input === "number") {
         return `number ${String(input)}`;
@@ -17,7 +16,7 @@ const processInput = (input) => {
         return `string ${input}`;
     }
 };
-console.log(processInput(255799));
+// console.log(processInput(255799))
 // question 03
 class Vehical {
     constructor(m, mo, y) {
@@ -30,7 +29,7 @@ class Vehical {
     }
 }
 let vehical1 = new Vehical("Toyota", "Camry", 2020);
-console.log(vehical1.getInfo());
+// console.log(vehical1.getInfo())
 class Car extends Vehical {
     constructor(make, model, year, d) {
         super(make = make, model = model, year = year);
@@ -41,7 +40,7 @@ class Car extends Vehical {
     }
 }
 let car1 = new Car("Toyota", "Camry", 2020, 4);
-console.log(car1.getInfo());
+// console.log(car1.getInfo())
 class Motercycle extends Vehical {
     constructor(make, model, year, hasSideCar) {
         super(make = make, model = model, year = year);
@@ -52,7 +51,7 @@ class Motercycle extends Vehical {
     }
 }
 let moterCycle1 = new Motercycle("Honde", "CD70", 2018, true);
-console.log(moterCycle1.getInfo());
+// console.log(moterCycle1.getInfo())
 // Question 04 
 class BankAccount {
     constructor(balance, accountNumber) {
@@ -78,7 +77,7 @@ class BankAccount {
     }
 }
 let newAccount = new BankAccount(5000, "877768799");
-console.log(newAccount.withdraw(4500));
+// console.log(newAccount.withdraw(4500))
 // Question 05 
 class Shape {
     constructor(color) {
@@ -116,7 +115,7 @@ let product1 = {
     price: 50000,
     category: "electronics products"
 };
-console.log(createProduct(product1));
+// console.log(createProduct(product1));
 // Question 07 
 class Employee {
     constructor(name, salary) {
@@ -146,9 +145,9 @@ class Designer extends Employee {
     }
 }
 let developer1 = new Developer("hassan ali", 500000, "javascript");
-console.log(developer1.getDetails());
+// console.log(developer1.getDetails())
 let designer1 = new Designer("hassan ali", 500000, "figma");
-console.log(designer1.getDetails());
+// console.log(designer1.getDetails())
 // question 08
 class Student {
     constructor(name, school, studentID) {
@@ -173,5 +172,17 @@ let student1 = new Student("rohan", "al syed", 344483);
 student1.addGrades = 92;
 student1.addGrades = 63;
 student1.addGrades = 88;
-console.log(student1.getAverageGrade);
+const handleResponse = (response) => {
+    if (response.success) {
+        return response;
+    }
+    else {
+        return response;
+    }
+};
+let response = {
+    success: false,
+    data: "error"
+};
+console.log(handleResponse(response));
 //# sourceMappingURL=app.js.map

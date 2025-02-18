@@ -17,7 +17,7 @@ let user : User = {
   isActive : true,
 }
 
-console.log(createUser(user))
+// console.log(createUser(user))
 
 // question 02
 
@@ -31,7 +31,7 @@ const processInput = (input : Input)=>{
   }
 }
 
-console.log(processInput(255799))
+// console.log(processInput(255799))
 
 // question 03
 
@@ -51,7 +51,7 @@ class Vehical {
   }
 }
 let vehical1 = new Vehical("Toyota", "Camry", 2020);
-console.log(vehical1.getInfo())
+// console.log(vehical1.getInfo())
 
 class Car extends Vehical {
   doors : number
@@ -66,7 +66,7 @@ getInfo () : string {
 }
 let car1 = new Car("Toyota", "Camry", 2020, 4)
 
-console.log(car1.getInfo())
+// console.log(car1.getInfo())
 
 class Motercycle extends Vehical {
   hasSideCar : boolean;
@@ -82,7 +82,7 @@ class Motercycle extends Vehical {
 
 let moterCycle1 = new Motercycle("Honde", "CD70", 2018, true);
 
-console.log(moterCycle1.getInfo())
+// console.log(moterCycle1.getInfo())
 
 // Question 04 
 
@@ -117,7 +117,7 @@ class BankAccount {
 
 let newAccount = new BankAccount(5000,"877768799")
 
-console.log(newAccount.withdraw(4500))
+// console.log(newAccount.withdraw(4500))
 
 // Question 05 
 
@@ -181,7 +181,7 @@ let product1 : Product ={
   price : 50000,
   category : "electronics products"
 }
-console.log(createProduct(product1));
+// console.log(createProduct(product1));
 
 // Question 07 
 
@@ -228,11 +228,11 @@ class Designer extends Employee {
 
 let developer1 = new Developer("hassan ali",500000, "javascript")
 
-console.log(developer1.getDetails())
+// console.log(developer1.getDetails())
 
 let designer1 = new Designer("hassan ali",500000, "figma")
 
-console.log(designer1.getDetails())
+// console.log(designer1.getDetails())
 
 // question 08
 
@@ -270,4 +270,34 @@ student1.addGrades = 92
 student1.addGrades = 63
 student1.addGrades = 88
 
-console.log(student1.getAverageGrade)
+// console.log(student1.getAverageGrade)
+
+
+// question 09
+
+type ResponseData = {
+  success : boolean;
+  data : string;
+  } 
+
+type ResponseError = {
+  success : boolean;
+  error : string;
+}  
+
+type finalResponse = ResponseData | ResponseError
+
+const handleResponse = (response : finalResponse) =>{
+  if (response.success ){
+   return response
+  } else {
+    return response
+  }
+}
+
+let response = {
+  success : false,
+  data : "error"
+}
+
+console.log(handleResponse(response));
