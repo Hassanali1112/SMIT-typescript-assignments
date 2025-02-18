@@ -149,4 +149,29 @@ let developer1 = new Developer("hassan ali", 500000, "javascript");
 console.log(developer1.getDetails());
 let designer1 = new Designer("hassan ali", 500000, "figma");
 console.log(designer1.getDetails());
+// question 08
+class Student {
+    constructor(name, school, studentID) {
+        this.grades = [];
+        this.name = name;
+        this.school = school;
+        this.studentID = studentID;
+    }
+    set addGrades(grade) {
+        this.grades.push(grade);
+    }
+    get getAverageGrade() {
+        ;
+        let averageGrade = 0;
+        for (let i = 0; i < this.grades.length; i++) {
+            averageGrade += this.grades[i];
+        }
+        return (averageGrade / this.grades.length);
+    }
+}
+let student1 = new Student("rohan", "al syed", 344483);
+student1.addGrades = 92;
+student1.addGrades = 63;
+student1.addGrades = 88;
+console.log(student1.getAverageGrade);
 //# sourceMappingURL=app.js.map

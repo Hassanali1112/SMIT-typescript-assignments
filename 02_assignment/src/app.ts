@@ -233,3 +233,41 @@ console.log(developer1.getDetails())
 let designer1 = new Designer("hassan ali",500000, "figma")
 
 console.log(designer1.getDetails())
+
+// question 08
+
+class Student {
+  public name : string;
+  private grades : number[] = []
+  protected school : string;
+  readonly studentID : number;
+
+  constructor(name : string, school : string, studentID : number){
+    this.name = name;
+    this.school = school;
+    this.studentID = studentID;
+  }
+
+  set addGrades ( grade : number){
+    this.grades.push(grade)
+  }
+
+  get getAverageGrade (){;
+    let averageGrade= 0
+    for(let i = 0; i< this.grades.length; i ++){
+      averageGrade +=this.grades[i];
+    }
+    return (averageGrade / this.grades.length)
+  }
+
+
+}
+
+
+let student1 = new Student("rohan", "al syed",344483)
+
+student1.addGrades = 92
+student1.addGrades = 63
+student1.addGrades = 88
+
+console.log(student1.getAverageGrade)
