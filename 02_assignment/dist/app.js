@@ -53,4 +53,58 @@ class Motercycle extends Vehical {
 }
 let moterCycle1 = new Motercycle("Honde", "CD70", 2018, true);
 console.log(moterCycle1.getInfo());
+// Question 04 
+class BankAccount {
+    constructor(balance, accountNumber) {
+        this.balance = balance,
+            this.accountNumber = accountNumber;
+    }
+    get checkAccountBalance() {
+        return this.balance;
+    }
+    get checkAccountNumber() {
+        return this.accountNumber;
+    }
+    setBalance(amount) {
+        return this.balance = this.balance + amount;
+    }
+    withdraw(amount) {
+        if (amount > this.balance) {
+            return `Sory you have insufficent balane to make ${amount} withdraw `;
+        }
+        else {
+            return `you have successfully withdraw ${amount}, you current balance is ${this.balance - amount}.00`;
+        }
+    }
+}
+let newAccount = new BankAccount(5000, "877768799");
+console.log(newAccount.withdraw(4500));
+// Question 05 
+class Shape {
+    constructor(color) {
+        this.color = color;
+    }
+    getColor() {
+        return this.color;
+    }
+}
+class Circle extends Shape {
+    constructor(radius, color) {
+        super(color);
+        this.radius = radius;
+    }
+    calculateArea() {
+        return `the area of circle is `;
+    }
+}
+class Rectangle extends Shape {
+    constructor(width, height, color) {
+        super(color);
+        this.width = width;
+        this.height = height;
+    }
+    calculateArea() {
+        return `the area of rectangle is ${this.width * this.height}`;
+    }
+}
 //# sourceMappingURL=app.js.map

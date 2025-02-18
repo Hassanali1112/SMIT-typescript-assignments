@@ -83,3 +83,82 @@ class Motercycle extends Vehical {
 let moterCycle1 = new Motercycle("Honde", "CD70", 2018, true);
 
 console.log(moterCycle1.getInfo())
+
+// Question 04 
+
+class BankAccount {
+  private balance : number;
+  private readonly accountNumber :  string;
+  constructor(balance : number, accountNumber : string){
+    this.balance = balance,
+    this.accountNumber = accountNumber;
+  }
+
+  get checkAccountBalance () : number {
+    return this.balance;
+  }
+
+  get checkAccountNumber () : string {
+    return this.accountNumber;
+  }
+
+   setBalance (amount : number) : number{
+   return this.balance = this.balance + amount;
+  }
+
+  withdraw ( amount : number) : any {
+    if(amount > this.balance){
+      return `Sory you have insufficent balane to make ${amount} withdraw `
+    } else{
+      return `you have successfully withdraw ${amount}, you current balance is ${this.balance - amount}.00`
+    }
+  }
+}
+
+let newAccount = new BankAccount(5000,"877768799")
+
+console.log(newAccount.withdraw(4500))
+
+// Question 05 
+
+abstract class Shape {
+  protected color : string;
+  constructor(color : string){
+    this.color = color;
+  }
+
+  abstract calculateArea () : void
+
+  getColor () :string {
+    return this.color;
+  }
+}
+
+class Circle extends Shape {
+  radius : number;
+
+  constructor( radius : number, color : string){
+    super(color)
+    this.radius = radius
+  }
+  calculateArea() {
+    return `the area of circle is `
+    
+  }
+}
+
+class Rectangle extends Shape {
+  width: number;
+  height: number;
+
+  constructor(width: number, height: number, color: string) {
+    super(color);
+    this.width = width;
+    this.height = height;
+  }
+
+  calculateArea() {
+    return `the area of rectangle is ${this.width * this.height}`
+  }
+}
+
