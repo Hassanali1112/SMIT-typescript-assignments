@@ -220,6 +220,15 @@ console.log(dog1.getSpecies());
 let cat1 = new Cat("cat");
 console.log(cat1.makeSound());
 console.log(cat1.getSpecies());
+// question 11
+const findIndex = (arr, value) => {
+    let index = arr.indexOf(value);
+    return index;
+};
+let checkArr = [1, 2, 3, 4, 5];
+console.log(findIndex(checkArr, 51));
+let testStringArr = ["1", "2", "3", "4"];
+console.log(findIndex(testStringArr, "2"));
 class CarClass {
     drive() {
         return `Driving a car!`;

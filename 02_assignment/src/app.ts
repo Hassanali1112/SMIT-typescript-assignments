@@ -358,11 +358,18 @@ console.log(cat1.getSpecies())
 
 // question 11
 
-// const findIndex = <T extends [] > ( arr  : T[], value : T) =>{
-//   let newValue : number = value;
-//   let index : number = arr.indexOf(newValue);
-//   if(index)
-// }
+const findIndex = <T> ( arr  : T[], value : T) =>{
+ let index = arr.indexOf(value)
+ 
+ return index
+}
+
+let checkArr = [1,2,3,4,5]
+
+console.log(findIndex(checkArr, 51));
+
+let testStringArr = ["1","2","3","4"]
+console.log(findIndex(testStringArr, "2"));
 
 
 // queston 12
