@@ -189,6 +189,7 @@ let response = {
     data: "error"
 };
 console.log(handleResponse(response));
+// question 10
 class Animal {
     constructor(species) {
         this.species = species;
@@ -219,4 +220,20 @@ console.log(dog1.getSpecies());
 let cat1 = new Cat("cat");
 console.log(cat1.makeSound());
 console.log(cat1.getSpecies());
+const useVehicle = (vehicle) => {
+    console.log(vehicle);
+};
+let cars = { drive() {
+        return `Driving a car!`;
+    } };
+console.log(useVehicle(cars));
+const describeEmployee = (emp) => {
+    console.log(emp);
+};
+let fullTimeEmployee1 = {
+    name: "John",
+    age: 30,
+    jobTitle: "Software Engineer"
+};
+describeEmployee(fullTimeEmployee1);
 //# sourceMappingURL=app.js.map

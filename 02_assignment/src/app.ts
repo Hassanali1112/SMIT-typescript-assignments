@@ -311,6 +311,7 @@ let response = {
 
 console.log(handleResponse(response));
 
+// question 10
 
 abstract class Animal{
   protected species : string;
@@ -354,3 +355,56 @@ let cat1 = new Cat("cat")
 
 console.log(cat1.makeSound())
 console.log(cat1.getSpecies())
+
+// question 11
+
+// const findIndex = <T extends [] > ( arr  : T[], value : T) =>{
+//   let newValue : number = value;
+//   let index : number = arr.indexOf(newValue);
+//   if(index)
+// }
+
+
+// queston 10
+
+interface newCar {
+  drive(): void
+}
+interface newBike {
+  ride(): void
+}
+
+const useVehicle = (vehicle : newCar | newBike)=>{
+  console.log(vehicle)
+  
+}
+
+let cars : newCar = {drive(){
+  return `Driving a car!`
+}}
+console.log(useVehicle(cars))
+
+// question 13
+
+interface Person {
+  name : string;
+  age : number;
+}
+
+interface EmployeeInterFace {
+  jobTitle : string;
+}
+
+type FullTimeEmployee = Person & EmployeeInterFace;
+
+const describeEmployee = (emp : FullTimeEmployee)=>{
+  console.log(emp)
+}
+
+let fullTimeEmployee1 = {
+  name : "John",
+  age : 30,
+  jobTitle : "Software Engineer"
+}
+
+describeEmployee(fullTimeEmployee1)
