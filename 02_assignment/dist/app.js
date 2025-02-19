@@ -220,13 +220,28 @@ console.log(dog1.getSpecies());
 let cat1 = new Cat("cat");
 console.log(cat1.makeSound());
 console.log(cat1.getSpecies());
-const useVehicle = (vehicle) => {
-    console.log(vehicle);
-};
-let cars = { drive() {
+class CarClass {
+    drive() {
         return `Driving a car!`;
-    } };
-console.log(useVehicle(cars));
+    }
+}
+class BikeClass {
+    ride() {
+        return `Riding a bike!`;
+    }
+}
+const useVehicle = (vehicle) => {
+    if (vehicle instanceof CarClass) {
+        return vehicle.drive();
+    }
+    else if (vehicle instanceof BikeClass) {
+        return vehicle.ride();
+    }
+};
+let car = new CarClass();
+console.log(useVehicle(car));
+let bike = new BikeClass();
+console.log(useVehicle(bike));
 const describeEmployee = (emp) => {
     console.log(emp);
 };

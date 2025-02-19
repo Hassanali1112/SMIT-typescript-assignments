@@ -365,24 +365,43 @@ console.log(cat1.getSpecies())
 // }
 
 
-// queston 10
+// queston 12
 
 interface newCar {
   drive(): void
 }
+
+
+class CarClass implements newCar {
+  drive(): string {
+    return  `Driving a car!`
+  }
+}
+
 interface newBike {
   ride(): void
 }
 
+class BikeClass implements newBike {
+  ride(): string {
+    return `Riding a bike!`
+  }
+}
+
 const useVehicle = (vehicle : newCar | newBike)=>{
-  console.log(vehicle)
+  if(vehicle instanceof CarClass){
+    return vehicle.drive()
+  } else if(vehicle instanceof BikeClass) {
+    return vehicle.ride()
+  }
   
 }
 
-let cars : newCar = {drive(){
-  return `Driving a car!`
-}}
-console.log(useVehicle(cars))
+let car : newCar = new CarClass()
+console.log(useVehicle(car))
+
+let bike : newBike = new BikeClass()
+console.log(useVehicle(bike))
 
 // question 13
 
