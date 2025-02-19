@@ -273,4 +273,18 @@ let cat = new CatClass();
 let dog = new DogClass();
 console.log(makeASound(cat));
 console.log(makeASound(dog));
+class NewCircle {
+    constructor(radius) {
+        this.radius = radius;
+    }
+    calculateArea() {
+        return (2 * 3.146 * (this.radius ** 2));
+    }
+    getType() {
+        return `Type of shape is Circle`;
+    }
+}
+let newCircle = new NewCircle(2);
+console.log(newCircle.calculateArea());
+console.log(newCircle.getType());
 //# sourceMappingURL=app.js.map

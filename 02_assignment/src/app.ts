@@ -465,3 +465,29 @@ let dog = new DogClass()
 
 console.log(makeASound(cat))
 console.log(makeASound(dog))
+
+// question 15
+
+interface ShapeInterFace {
+  calculateArea(): number;
+  getType() : string
+}
+
+class NewCircle implements ShapeInterFace {
+  radius : number
+  constructor(radius : number){
+    this.radius = radius
+  }
+  calculateArea(): number {
+    return (2 * 3.146 * (this.radius **2))
+   }
+  getType(): string {
+    return `Type of shape is Circle`
+    
+  }
+}
+
+let newCircle : ShapeInterFace = new NewCircle(2)
+
+console.log(newCircle.calculateArea())
+console.log(newCircle.getType())
