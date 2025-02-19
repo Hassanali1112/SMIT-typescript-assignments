@@ -408,3 +408,41 @@ let fullTimeEmployee1 = {
 }
 
 describeEmployee(fullTimeEmployee1)
+
+// question 14
+
+interface NewDog {
+  bark (): string
+}
+
+class DogClass implements NewDog {
+ bark(): string {
+  return "Woof!"
+ } 
+}
+
+
+interface NewCat {
+  meow (): string;
+}
+
+class CatClass implements NewCat {
+  meow(): string {
+    return "Meow!"
+  }
+}
+
+const makeASound = (pet : CatClass | DogClass) => {
+  if(pet instanceof CatClass) {
+    return pet.meow()
+  } else {
+    return pet.bark()
+  }
+}
+
+let cat = new CatClass ()
+
+let dog = new DogClass()
+
+console.log(makeASound(cat))
+console.log(makeASound(dog))

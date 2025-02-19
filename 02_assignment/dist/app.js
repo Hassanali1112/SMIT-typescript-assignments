@@ -236,4 +236,26 @@ let fullTimeEmployee1 = {
     jobTitle: "Software Engineer"
 };
 describeEmployee(fullTimeEmployee1);
+class DogClass {
+    bark() {
+        return "Woof!";
+    }
+}
+class CatClass {
+    meow() {
+        return "Meow!";
+    }
+}
+const makeASound = (pet) => {
+    if (pet instanceof CatClass) {
+        return pet.meow();
+    }
+    else {
+        return pet.bark();
+    }
+};
+let cat = new CatClass();
+let dog = new DogClass();
+console.log(makeASound(cat));
+console.log(makeASound(dog));
 //# sourceMappingURL=app.js.map
